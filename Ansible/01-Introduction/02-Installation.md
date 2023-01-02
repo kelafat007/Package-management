@@ -18,6 +18,10 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
    sudo su - ansible \
    sudo apt-add-repository ppa:ansible/ansible \
    sudo apt install ansible -y
+   
+## **If you get error of broken or Unmet dependencies, run**
+   #
+   sudo apt --fix-broken install -y
 
 ## **Ansible installation on REDHAT EC2**
 #
