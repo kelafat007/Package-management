@@ -1,29 +1,29 @@
 # Docker installation for Ubuntu
-''' sh
+
 sudo apt update
-'''
+
 ## Install a few prerequisite packages which let apt use packages over HTTPS
-''' sh
+
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
-'''
+
 ## Adding the GPG key for the official Docker repository to your system
-''' sh
+
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-'''
+
 ## Adding the Docker repository to APT sources
-''' sh
+
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-'''
+
 ## Installing from the Docker repo instead of the default Ubuntu repo
-''' sh
+
 apt-cache policy docker-ce
 sudo apt install docker-ce
 sudo systemctl status docker
-'''
+
 ## Adding docker user to the docker group. Will not be able to run docker commands if not added. Do same for any other user you want
-'''sh
+
 sudo usermod -aG docker username   #default user is docker
-'''
+
 #End of installation
 ______________________________________________________________________________
 ______________________________________________________________________________
